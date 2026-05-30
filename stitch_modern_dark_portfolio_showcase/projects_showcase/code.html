@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#ffb786",
+                    "secondary": "#4edea3",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-container-highest": "#353534",
+                    "on-primary": "#002e6a",
+                    "tertiary-fixed": "#ffdcc6",
+                    "surface-variant": "#353534",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface": "#131313",
+                    "on-secondary": "#003824",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-container": "#00311f",
+                    "on-primary-container": "#00285d",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "surface-container": "#201f1f",
+                    "primary-container": "#4d8eff",
+                    "on-tertiary-container": "#461f00",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed": "#001a42",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#adc6ff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary": "#502400",
+                    "primary": "#adc6ff",
+                    "tertiary-container": "#df7412",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-secondary-fixed": "#002113",
+                    "background": "#131313",
+                    "inverse-primary": "#005ac2",
+                    "outline-variant": "#424754",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a572",
+                    "outline": "#8c909f",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed": "#311400",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "surface-bright": "#393939",
+                    "surface-container-low": "#1c1b1b",
+                    "on-surface-variant": "#c2c6d6",
+                    "secondary-fixed": "#6ffbbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "xl": "96px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "container-max": "1200px",
+                    "md": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-xl": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-xl-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .backdrop-blur-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full bg-surface/80 backdrop-blur-md border-b border-outline-variant z-50">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">PORTFOLIO</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-lg items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">About Me</a>
+<a class="font-label-md text-label-md text-on-surface relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Works Showcase</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Contact</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-xl min-h-screen">
+<!-- Hero Header -->
+<section class="max-w-container-max mx-auto px-gutter pt-xl pb-lg">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-md">Selected <span class="text-primary">Works</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A curated selection of technical challenges and creative solutions across academic, personal, and professional environments.
+            </p>
+</section>
+<!-- Category Filters -->
+<section class="max-w-container-max mx-auto px-gutter mb-lg">
+<div class="flex flex-wrap gap-sm">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md">All Projects</button>
+<button class="bg-surface-container border border-outline-variant text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label-md text-label-md transition-all">University Projects</button>
+<button class="bg-surface-container border border-outline-variant text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label-md text-label-md transition-all">Personal Projects</button>
+<button class="bg-surface-container border border-outline-variant text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label-md text-label-md transition-all">Open Source</button>
+<button class="bg-surface-container border border-outline-variant text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label-md text-label-md transition-all">Collaborative</button>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="max-w-container-max mx-auto px-gutter pb-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Project Card 1: University -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Distributed Systems Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph of high-tech server blades in a data center, glowing with soft blue and green LEDs in a dimly lit, professional setting. The image uses a cool-toned, high-contrast palette of deep grays and electric blues, emphasizing technical precision and industrial maturity. The lighting is focused and dramatic, highlighting the sleek metallic textures and intricate circuitry of modern cloud infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9az9_gqADD7_VFbbT6zR4poP4IJHw6UCdLQ_xceNHkdoc86el0WhPYPwQt0vAjdg7VGUTp5tMMfFshRIJG5P88TeecoOBlyMs5aiH9qceX2hj4lwG-3vQs_7AqLUT2G818zpa__LYTKoQL0AuEUDznZ8dJNXsyB4mgYFLUVr8ypQrrjI30X8B_Brii9TQcszR9twsi6ugJoyCN8EaHi6-WlpB_ijPEv_ImGORdDi5FhAc8mMKp2-aJP1tFuLlmD4mlRBJ7W2Tp8"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">University</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Neural Distributed Mesh</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">A high-performance mesh network simulator built for analyzing node failure recovery in large-scale distributed systems.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">C++</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Go</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Docker</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Project Card 2: Open Source -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-secondary transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Open Source Library" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist workspace featuring a high-end mechanical keyboard and a code-filled monitor reflecting soft emerald light. The aesthetic is dark and focused, with a shallow depth of field highlighting elegant typography on the screen. The color palette is dominated by deep blacks and vibrant forest greens, creating a mood of professional craftsmanship and digital innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2T8O8uSTYFr2kahLYVIqmq60YWTqBURVKeYX0be_dKaAhbZ6KPsy7KdUY-NzFe7m58R-rfj15VFcib31V5tRGGz9dzWs2_Q1Wjagjl5WnmwAsVRndy3Dq_FDUvbMWDNaPurC4pqW7SCyHTNXmKja890g5ghsv0JmIL7TEpndzrXNazuAX_3NZT-stJnjF0ejnWfuua1w828M4sj6AhDUJ5zzRGRhTpdSoWhgQ4-C7jBTbm06lEiMgkX7XYwtavzB_dr0yB2BcIxE"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Open Source</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Echo Engine V2</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">A lightweight event-driven state management library for React focusing on zero-boilerplate and low-latency updates.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">TypeScript</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">React</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Rollup</span>
+</div>
+<button class="w-full py-3 border border-secondary text-secondary hover:bg-secondary hover:text-on-secondary rounded-lg font-label-md text-label-md transition-all">View Details</button>
+</div>
+</div>
+<!-- Project Card 3: Personal -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-tertiary transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Personal Art Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An abstract 3D visualization of flowing ribbons of light in shades of orange and warm amber, weaving through a pitch-black digital void. The lighting is soft and atmospheric, casting delicate reflections on invisible surfaces. The overall style is high-end minimalist digital art, suggesting creative energy and fluid movement while maintaining a clean, professional dark-mode vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ94HR3GNsX7bcmjAkJX-3L-KkaxI7dZE1ICMpQOVTGs5hlniAQEqwVpmBWyvvrKFup_XiL8YAmJ1iApYmFkzj0EVAZy5a61r1Qs5bs3RMd2uka-COw08l8uMOOFSq4UM9-jdawtTO9_gc1F2nCpe84Hn1In2SdXz0KNzfZesKW-u5A14_L6BjXKkGXhyBbMEklZqwD7NLSV3LLAji8NT3F-30JXMp4ONyQtEoWNLbvATf1HCizosKUTbiByINE6UpurpnG-5qGIo"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Personal</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Aura Creative Suite</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">A bespoke content management system tailored for visual artists, featuring automated image optimization and AR previews.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Next.js</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Three.js</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Vercel</span>
+</div>
+<button class="w-full py-3 border border-tertiary text-tertiary hover:bg-tertiary hover:text-on-tertiary rounded-lg font-label-md text-label-md transition-all">View Details</button>
+</div>
+</div>
+<!-- Project Card 4: Collaborative -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Collaborative Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic wide-angle shot of a group of diverse professionals working together around a glowing holographic interface in a futuristic, dimly lit command center. The lighting is low-key, with strong highlights from the cool blue light of the screens. The atmosphere is collaborative and high-stakes, executed in a clean, modern aesthetic with sharp details and deep shadow levels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD7Ghtql5rapEtFN4RCYFxA8u8KEfRtQA3ImJ630AKFn-nd4-m6L9HfxEHGGb9F2N90pdZVKIHKEBhJxoTae0DjMNCLdyGM3v_9qXgEwK9FhmSqJ5YqUY-ONQec2A2AGHkPFRGWiNRj113_JVvi56wV5kvjfW3cWrx2Se4UkybwGyGte1Td_176tekGRiwGrJlQrQ6PKyJnGmOyXtteE9bpzC2AtpM6PYeC8wm8W7Xx3OzYUSMdI5HqUcQ73JxpRVeQncdwafjvlk"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Collaborative</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Synergy Workflows</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">Real-time collaboration platform for remote engineering teams featuring integrated pair-programming terminals.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Rust</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">WebAssembly</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Redis</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">View Details</button>
+</div>
+</div>
+<!-- Project Card 5: University -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-outline transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Hardware Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A crisp, high-magnification close-up of a semi-conductor wafer under intense white laboratory lighting. The photo emphasizes the intricate, microscopic geometric patterns and the metallic sheen of the silicon. The color palette is monochromatic with sharp silvery highlights and deep black shadows, conveying a sense of extreme precision, academic rigor, and advanced engineering maturity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCngPCrTjuQp8HCSng8fxFih3NyUKkPGdUc8sg_TIE-ulBjSzdAksBDDFlNQr3RqYMKZIZG_JvZGYGFuGzBHR-QOiNsrVAucoi7wzQ4H1XRM7JXQPNYtOl1xC3xnfQT6xuPa-ocs5znMZzzE0bzL4Tz4HSR6mSFUdMKMX4yUIPf5ywFDJWYlhxEkgt657J6wdtqI9LJYDt5-vBP_MCRPl75XcwbFez39FRBvKdsfF0RkAsxshlcR_YVQ95tiF6RqsssOQtthDMHXxU"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">University</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Quantum Logic Gates</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">A theoretical framework and software implementation for simulating qubit decoherence in noise-heavy environments.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Python</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Qiskit</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Latex</span>
+</div>
+<button class="w-full py-3 border border-outline text-on-surface rounded-lg font-label-md text-label-md transition-all">View Details</button>
+</div>
+</div>
+<!-- Project Card 6: Personal -->
+<div class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-primary transition-all duration-300 flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-container-highest">
+<img alt="Cybersecurity Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dramatic high-tech scene showing a dark, minimalist terminal interface with glowing blue cyber-security scanning patterns. The room is dark, only illuminated by the sharp, intense light of the digital data streams. The overall aesthetic is sleek and intimidating, using a palette of deep obsidian and electric neon blue to represent technical expertise and digital security vigilance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNK12LYWwIKiU8oZ0vdlJoW_FTJs6PxSSUeLhXmSnoHtxXOroLQkAaedKZ8lo5KSpYjA5m8MyTVBPB828DL6wFtf7q29apkTdNO2Ny18tSXntF0EcAJVRkwp8ofPDenppUXJt0HurJ2a86MXM1UN-yjGB2fmgHokhds_MSoBVwhqclOlDG5Iga2kQzZr99MPgfE4mrOZ2cNUDWLSMVgmzfOF8wEXKgZJSZOXvT562OH4cTPJ_WOe313fbPZ9a-zZyUXEy-ckG5bls"/>
+<div class="absolute top-sm left-sm">
+<span class="bg-surface/60 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Personal</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Sentinel OSINT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">A modular reconnaissance tool for automated open-source intelligence gathering and threat pattern visualization.</p>
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Python</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Elasticsearch</span>
+<span class="bg-surface-container-highest text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm">Kibana</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-xl">
+<div class="flex flex-col md:flex-row justify-between items-center gap-md px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<div class="font-label-md text-label-md font-bold text-on-surface">PORTFOLIO</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Portfolio. Designed with precision.</p>
+</div>
+<div class="flex gap-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">Pinterest</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">Zhihu</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple filter interaction logic
+        const filterButtons = document.querySelectorAll('button[class*="rounded-full"]');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                btn.classList.add('bg-primary', 'text-on-primary');
+                btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+            });
+        });
+
+        // Sticky Navbar subtle interaction
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-surface/95');
+                nav.classList.remove('bg-surface/80');
+            } else {
+                nav.classList.add('bg-surface/80');
+                nav.classList.remove('bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

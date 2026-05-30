@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Works Showcase | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#ffb786",
+                    "secondary": "#4edea3",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-container-highest": "#353534",
+                    "on-primary": "#002e6a",
+                    "tertiary-fixed": "#ffdcc6",
+                    "surface-variant": "#353534",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface": "#131313",
+                    "on-secondary": "#003824",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-container": "#00311f",
+                    "on-primary-container": "#00285d",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "surface-container": "#201f1f",
+                    "primary-container": "#4d8eff",
+                    "on-tertiary-container": "#461f00",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed": "#001a42",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#adc6ff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary": "#502400",
+                    "primary": "#adc6ff",
+                    "tertiary-container": "#df7412",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-secondary-fixed": "#002113",
+                    "background": "#131313",
+                    "inverse-primary": "#005ac2",
+                    "outline-variant": "#424754",
+                    "on-error": "#690005",
+                    "secondary-container": "#00a572",
+                    "outline": "#8c909f",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed": "#311400",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "surface-bright": "#393939",
+                    "surface-container-low": "#1c1b1b",
+                    "on-surface-variant": "#c2c6d6",
+                    "secondary-fixed": "#6ffbbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "xl": "96px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "container-max": "1200px",
+                    "md": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-xl": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-xl-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-auto-rows: 10px;
+        }
+        .masonry-item {
+            grid-row-end: span 40;
+        }
+        .masonry-item.large {
+            grid-row-end: span 55;
+        }
+        .masonry-item.small {
+            grid-row-end: span 30;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .card-hover:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">PORTFOLIO</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">About Me</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Projects</a>
+<a class="font-label-md text-label-md text-on-surface relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full transition-colors duration-200" href="#">Works Showcase</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-xl px-gutter max-w-container-max mx-auto">
+<!-- Hero Section / Filter Header -->
+<section class="mb-xl text-center md:text-left">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-md">Selected Works</h1>
+<div class="flex flex-wrap gap-sm justify-center md:justify-start">
+<button class="px-md py-base rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all">All Works</button>
+<button class="px-md py-base rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all">Media Works</button>
+<button class="px-md py-base rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all">Tutorial Series</button>
+<button class="px-md py-base rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:border-primary transition-all">Dev Tools</button>
+</div>
+</section>
+<!-- Showcase Grid -->
+<div class="masonry-grid gap-gutter">
+<!-- Video Tutorial Item (Large) -->
+<div class="masonry-item large relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A cinematic, high-resolution close-up of a professional video editing workspace in a dimly lit studio. A large monitor displays complex timeline tracks with glowing audio waves and high-definition video clips. The room is bathed in a soft blue and orange ambient glow, reflecting the high-tech, professional atmosphere of a creative media production environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg01z7GH6ypl7UaPXS48vHJsKiyJ0G51_43Q2Obcgyv1c59f2oucwEt_MpzhVm74uyPEHbhsHsKsY9wQUHxE6Vtj4VpnlOYBxOTcdB91jgT8OjDu9JOFj4rPFXLIJXZJu7hNVeuAgPrn38oxKbBdJdrNPc-QwOh8u8FOQmXM2bu7tnf1b5jXU5wdF0I3Ab1L172ueV_-_-1mNeMNc0sVtczX4eQUo60kPwvLLYsz9fe44oervHAhtt63llIfBIFs7hDWctcBQqQqM"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-primary text-on-primary w-fit px-sm py-xs rounded-full mb-sm">VIDEO TUTORIAL</span>
+<h3 class="font-headline-md text-headline-md mb-xs">Advanced Node.js Patterns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">A 12-part series mastering asynchronous architecture and scalability.</p>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">play_circle</span>
+<span class="font-label-md text-label-md">2.4k Views</span>
+</div>
+</div>
+</div>
+<!-- Dev Tool (Small) -->
+<div class="masonry-item small relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean, minimalist 3D render of a terminal window floating in a dark, atmospheric void. The terminal screen displays lines of neon-green code, highlighting technical precision. Sharp, high-contrast lighting from above casts subtle shadows on the dark grey metallic frame of the window, creating a futuristic developer-centric aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8MdusD4J8ehm9QPUWBD6nu4nT103s_lRxpUMC_EZCof6f1MkKE9ysIlH32QJ2twjzs7Sfw1E-3SmXxBb2B-z6W9v7Eb4_oftOZ92eDeVTRUxv2mV7Tv8podrDQo6GNGpIymVfb1lSJDpPrjIQSk84jeBtuachdd7gyDt5z9DlZ8ZEQSlOaNTc-j2GoTjkgPVn2fRtW5EMcXBhrrBQMa4S0uH82ya_nhfTDwpGlOWYn4izeg9gl-0RHCUjYz_rLec6lKzvlZfsfcg"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary w-fit px-sm py-xs rounded-full mb-sm">PLUGIN</span>
+<h3 class="font-headline-md text-headline-md mb-xs">VSCode Neumorph</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A custom interface theme for visual clarity.</p>
+</div>
+</div>
+<!-- Technical Article (Standard) -->
+<div class="masonry-item relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro photograph of an open book with elegant typography on cream-colored paper. The pages are lit by a soft, warm directional light that highlights the texture of the paper and the sharp black ink of the serif font. The background is a blurred, dark oak library setting, evoking a sense of deep focus, wisdom, and intellectual maturity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFHTJ3xLUg8hNdb6tGp73FqToP7RAGZbujEghgfdfzslehQTXgw5OxWOH7qNV5CRrBsm0TdvWG_Wk9tBuZemrydRriVQb0OMtCN0h_EWdU0qULh9HL3aAWXDP13dGfxxBfzRhUr78p8T2Uw4VF1LBaT0YgsXZ8KSal8KNY6yVwQtamoEGHx_9UIVYJlUWCp2YP-6HaluYZsIfwPZ-JWA-rsVdhDHCphQ9YYayJkCxON4-iY9oNOZOJHa6SPUXSB06-ZxZH9F-zCzc"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary w-fit px-sm py-xs rounded-full mb-sm">ARTICLE</span>
+<h3 class="font-headline-md text-headline-md mb-xs">The Rust Revolution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Why systems programming is entering a new era of safety.</p>
+</div>
+</div>
+<!-- Guide (Standard) -->
+<div class="masonry-item relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-tech laboratory environment with sleek white desks and blue LED accent lighting. Transparent glass displays show glowing blueprint data and 3D wireframe models. The scene is captured in a wide shot with a shallow depth of field, focusing on the sophisticated, modern equipment in the foreground while the background remains a soft, professional blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe7p8UbSQtX7but0vb1kBZYwmfJ-nAvyfAAG9Jn4s4BZAEutp0WUF0GHIZ_0DytY6e4UU2O6IKhfcAlMxESKNwmja7EALXFnhptjziOoEskIXLzWyQyZIw_rOm3qZM0vd_FDWn0wswXOk-h0o3cFuO91tdVh9pi_uJlxTBpo2y50j7_zKAo4TSv31UMp1FmM2-vECRf2OwlhkupkEkt2eg8knS-9_xGIlAgYXixC3mSiWtfDfJNq-WtUpmIbUGHb-boaSF0_7mG_c"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-primary text-on-primary w-fit px-sm py-xs rounded-full mb-sm">GUIDE</span>
+<h3 class="font-headline-md text-headline-md mb-xs">Micro-interaction Guide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Principles of motion in modern UI design.</p>
+</div>
+</div>
+<!-- Dev Tool (Large) -->
+<div class="masonry-item large relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract digital data visualization representing a global network. Millions of glowing particles and fine lines connect across a dark background, forming a sphere of light. The color palette is dominated by electric blues and deep cyans, creating a sense of immense scale, complex connectivity, and high-speed information flow in a digital landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH1zbozNi0B0ow1ggzU9HcycFU7kkckboP31rc6EjisY89HvPqDnqLiPFWZrEHHbaYagzBQmQGSdVzsz6wvFv19TY3r7XJfl1VGzZXWKbMnwhCtsGP8M_TAAg2AUmSryIxFDbBZztw-gz5pkiTFc8ec-1exw5LpCd2sSevcCFV7_g_BpdF4a7iWsCZ8A6paWzux2Wc31APSIC37IkNfMbv98bhdt8av98zH_OODhCT_Zq364H1zO3P9Mg8nOGMaRVCPFSI2sh6jkM"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary w-fit px-sm py-xs rounded-full mb-sm">TOOL</span>
+<h3 class="font-headline-md text-headline-md mb-xs">DataFlow Viz v2.0</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">An open-source library for real-time dataset visualization.</p>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">1.2k Stars</span>
+</div>
+</div>
+</div>
+<!-- Media Work (Standard) -->
+<div class="masonry-item relative group overflow-hidden rounded-xl bg-surface-container border border-outline-variant card-hover">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A stylized collection of retro and modern gaming hardware arranged neatly on a dark matte surface. Vintage controllers, a high-end mechanical keyboard, and a sleek handheld console are illuminated by sharp magenta and cyan neon lights from the side. The overall aesthetic is a clean, vaporwave-inspired fusion of nostalgia and modern technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoYTGYUsZrQPpky5_gg9eKmlvmz6_PUGIgHjEzEfbHa0g4qZ9JJGm0uy0MCHBSzjCK6Vpgn8Q4FHg07KowBTxcHG8S9h5JQsxKmdg8XSca4QlsEysZPwY7UKx4njGYCFrn2-yLwdYvaF8OIdz9qC1DNpl85jvOfHENjZMoKlGki9yPAPcLO5Bnb01yv2wvg6xpgptQx6gD-AXoi6ZjaLUYLtRUQReOBsCngGnRz1Dss8iB-aDY9enXqYBSf_21le-K6nBkLXQfheg"/>
+<div class="overlay absolute inset-0 bg-background/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-md">
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary w-fit px-sm py-xs rounded-full mb-sm">MEDIA</span>
+<h3 class="font-headline-md text-headline-md mb-xs">Retro Future Synth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sound design project for indie game developers.</p>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-xl text-center">
+<button class="px-xl py-md rounded-lg bg-surface-container border border-outline-variant font-label-md text-label-md hover:border-primary transition-all duration-300 group">
+<span class="flex items-center gap-sm justify-center">
+                    Load More Projects
+                    <span class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-500">expand_more</span>
+</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl border-t border-outline-variant bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center gap-md px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<div class="font-label-md text-label-md font-bold text-on-surface">PORTFOLIO</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Portfolio. Designed with precision.</p>
+</div>
+<div class="flex gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">Pinterest</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded-full px-4 py-1" href="#">Zhihu</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple filter logic simulation
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if(btn.innerText.includes('Works') || btn.innerText.includes('Series') || btn.innerText.includes('Tools')) {
+                    // Reset others
+                    btn.parentElement.querySelectorAll('button').forEach(b => {
+                        b.classList.remove('bg-primary', 'text-on-primary');
+                        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                    });
+                    // Set active
+                    btn.classList.add('bg-primary', 'text-on-primary');
+                    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                    
+                    // Simple shuffle animation trigger
+                    const grid = document.querySelector('.masonry-grid');
+                    grid.style.opacity = '0.5';
+                    setTimeout(() => {
+                        grid.style.opacity = '1';
+                    }, 300);
+                }
+            });
+        });
+
+        // Hover tilt effect (Vanilla JS)
+        const cards = document.querySelectorAll('.masonry-item');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+        });
+    </script>
+</body></html>
