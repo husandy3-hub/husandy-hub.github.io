@@ -43,31 +43,31 @@ personal_web/
 
 ## 🌐 GitHub Pages 托管
 
-站点仓库：[husandy-hub.github.io](https://github.com/husandy3-hub/husandy-hub.github.io)
-
 | 项目 | 说明 |
 |------|------|
-| 访问地址 | https://husandy-hub.github.io/ |
-| 发布目录 | 仓库根目录下的 `/docs` |
-| 发布分支 | `main`（或 `master`） |
+| 仓库 | [husandy3-hub/husandy-hub.github.io](https://github.com/husandy3-hub/husandy-hub.github.io) |
+| 发布方式 | **Deploy from a branch** → 分支 `main` → 文件夹 **`/docs`** |
+| 构建输出 | 运行 `npm run build:pages` 后静态文件写入 `docs/` |
+| 站点地址 | 自定义域名一般为 `https://husandy-hub.github.io/`；未配置时可能为 `https://husandy3-hub.github.io/husandy-hub.github.io/` |
 
-### 在 GitHub 上开启 Pages
+### 在 GitHub 开启 Pages
 
 1. 打开仓库 **Settings → Pages**
 2. **Build and deployment → Source** 选择 **Deploy from a branch**
 3. **Branch** 选 `main`，**Folder** 选 **`/docs`**
 4. 保存后等待约 1–10 分钟生效
 
-### 本地构建并更新站点
+### 本地构建并更新线上站点
 
 ```bash
-npm run build:pages   # 构建产物输出到 docs/
+npm install
+npm run build:pages
 git add .
-git commit -m "Update site"
+git commit -m "Update GitHub Pages site"
 git push origin main
 ```
 
-构建时会自动带上 `public/.nojekyll`，避免 Jekyll 处理 `_assets` 等路径。
+`public/.nojekyll` 会在构建时复制到 `docs/`，避免 Jekyll 干扰 Vite 资源路径。
 
 ## 🚀 快速开始
 
@@ -96,7 +96,7 @@ npm run dev
 npm run build
 ```
 
-构建文件将输出到 `dist/` 目录
+构建文件将输出到 `docs/` 目录（用于 GitHub Pages）
 
 ### 预览生产版本
 
