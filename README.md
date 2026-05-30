@@ -1,4 +1,4 @@
-# husandy-hub.github.io · Personal Portfolio
+# husandy3-hub.github.io · Personal Portfolio
 
 基于 React + TypeScript + Vite + Tailwind CSS 构建的现代化个人网页项目
 
@@ -45,22 +45,21 @@ personal_web/
 
 | 项目 | 说明 |
 |------|------|
-| 仓库 | [husandy3-hub/husandy-hub.github.io](https://github.com/husandy3-hub/husandy-hub.github.io) |
+| 仓库 | [husandy3-hub/husandy3-hub.github.io](https://github.com/husandy3-hub/husandy3-hub.github.io)（须与 GitHub 用户名一致） |
 | 发布方式 | **Deploy from a branch** → 分支 `main` → 文件夹 **`/docs`** |
 | 构建输出 | 运行 `npm run build:pages` 后静态文件写入 `docs/` |
-| 站点地址（自定义域名） | `https://husandy-hub.github.io/`（需在 Pages 里配置，见下） |
-| 备用项目站地址 | `https://husandy3-hub.github.io/husandy-hub.github.io/` |
+| 站点地址 | `https://husandy3-hub.github.io/` |
 
 ### 在 GitHub 开启 Pages
 
-1. 打开仓库 **Settings → Pages**
-2. **Build and deployment → Source** 选择 **Deploy from a branch**
-3. **Branch** 选 `main`，**Folder** 选 **`/docs`**
-4. **Custom domain** 填写 `husandy-hub.github.io`，保存（`docs/CNAME` 已随构建生成）
-5. 若使用自定义域名，在 DNS 服务商添加 GitHub 要求的 **A 记录** 或 **CNAME**（Pages 设置页会提示）
+1. 将仓库重命名为 **`husandy3-hub.github.io`**（Settings → General → Repository name）。只有仓库名与用户名 `husandy3-hub` 一致时，站点才会挂在根域名，而不是 `/仓库名/` 子路径。
+2. 打开仓库 **Settings → Pages**
+3. **Build and deployment → Source** 选择 **Deploy from a branch**
+4. **Branch** 选 `main`，**Folder** 选 **`/docs`**
+5. **Custom domain** 留空（使用默认 `husandy3-hub.github.io`）
 6. 等待约 1–10 分钟生效
 
-> 若直接访问 `https://husandy3-hub.github.io/` 会出现 GitHub 404，因为账号名是 `husandy3-hub`，不是用户站仓库 `husandy3-hub.github.io`。
+> 若仓库仍叫 `husandy-hub.github.io`，站点地址只能是 `https://husandy3-hub.github.io/husandy-hub.github.io/`（项目站），无法使用根路径。
 
 ### 本地构建并更新线上站点
 
