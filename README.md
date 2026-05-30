@@ -48,15 +48,19 @@ personal_web/
 | 仓库 | [husandy3-hub/husandy-hub.github.io](https://github.com/husandy3-hub/husandy-hub.github.io) |
 | 发布方式 | **Deploy from a branch** → 分支 `main` → 文件夹 **`/docs`** |
 | 构建输出 | 运行 `npm run build:pages` 后静态文件写入 `docs/` |
-| **正确访问地址** | **https://husandy3-hub.github.io/husandy-hub.github.io/** |
-| 说明 | `https://husandy-hub.github.io/` 需 GitHub 账号 `husandy-hub` 或已配置自定义域名，否则会 404 |
+| 站点地址（自定义域名） | `https://husandy-hub.github.io/`（需在 Pages 里配置，见下） |
+| 备用项目站地址 | `https://husandy3-hub.github.io/husandy-hub.github.io/` |
 
 ### 在 GitHub 开启 Pages
 
 1. 打开仓库 **Settings → Pages**
 2. **Build and deployment → Source** 选择 **Deploy from a branch**
 3. **Branch** 选 `main`，**Folder** 选 **`/docs`**
-4. 保存后等待约 1–10 分钟生效
+4. **Custom domain** 填写 `husandy-hub.github.io`，保存（`docs/CNAME` 已随构建生成）
+5. 若使用自定义域名，在 DNS 服务商添加 GitHub 要求的 **A 记录** 或 **CNAME**（Pages 设置页会提示）
+6. 等待约 1–10 分钟生效
+
+> 若直接访问 `https://husandy3-hub.github.io/` 会出现 GitHub 404，因为账号名是 `husandy3-hub`，不是用户站仓库 `husandy3-hub.github.io`。
 
 ### 本地构建并更新线上站点
 
