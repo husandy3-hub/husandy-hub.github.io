@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// GitHub Pages: 从仓库 /docs 发布；用户站点或自定义域名使用根路径 base
+// 项目站：husandy3-hub.github.io/husandy-hub.github.io/
+// 若改用账号主页仓库 husandy3-hub.github.io，请把 base 改为 '/'
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/husandy-hub.github.io/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,

@@ -48,7 +48,8 @@ personal_web/
 | 仓库 | [husandy3-hub/husandy-hub.github.io](https://github.com/husandy3-hub/husandy-hub.github.io) |
 | 发布方式 | **Deploy from a branch** → 分支 `main` → 文件夹 **`/docs`** |
 | 构建输出 | 运行 `npm run build:pages` 后静态文件写入 `docs/` |
-| 站点地址 | 自定义域名一般为 `https://husandy-hub.github.io/`；未配置时可能为 `https://husandy3-hub.github.io/husandy-hub.github.io/` |
+| **正确访问地址** | **https://husandy3-hub.github.io/husandy-hub.github.io/** |
+| 说明 | `https://husandy-hub.github.io/` 需 GitHub 账号 `husandy-hub` 或已配置自定义域名，否则会 404 |
 
 ### 在 GitHub 开启 Pages
 
